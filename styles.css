@@ -1,0 +1,45 @@
+
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        }
+
+        body {
+            background:linear-gradient(45deg , rgb(245, 179, 93) , rgb(166, 195, 244));
+        }
+
+        @media screen and (max-width:900px) {
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content:left;
+            }
+
+            #col-first{
+                width:100%;
+            }
+
+            #col-first form {
+                display: flex;
+                flex-direction: row;
+                align-items:center ;
+            }
+
+            #col-first form label {
+                width: 50%;
+                font-size: 0.9rem;
+            }
+
+            #col-first form select {
+                font-size: 0.9rem;
+            }
+
+            #col-second {
+                width: 100%;
+            }
+
+            #col-second #container {
+                margin: 10px 70px;
+            }
+        }
+   
