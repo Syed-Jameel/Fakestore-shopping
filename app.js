@@ -59,7 +59,7 @@ function GetCartItemsCount() {
 }
 
 function AddToCartClick(id) {
-    fetch(`http://fakestoreapi.com/products/${id}`)
+    fetch(`https://fakestoreapi.com/products/${id}`)
         .then(function (response) {
             return response.json();
         })
