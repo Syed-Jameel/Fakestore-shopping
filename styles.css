@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px auto;
+    margin: 30px auto;
 }
 
 #attribution-container .attribution span {
@@ -28,10 +28,10 @@ body {
 }
 
 @media screen and (max-width:900px) {
-     header div button #txt {
+    header div button #btn-cart {
         display: none;
     }
-    
+
     .row {
         display: flex;
         flex-direction: column;
