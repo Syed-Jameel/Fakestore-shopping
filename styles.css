@@ -28,6 +28,10 @@ body {
 }
 
 @media screen and (max-width:900px) {
+     header div button #txt {
+        display: none;
+    }
+    
     .row {
         display: flex;
         flex-direction: column;
