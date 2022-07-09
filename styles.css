@@ -1,45 +1,77 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-        html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-        }
+body {
+    background: linear-gradient(45deg, rgb(245, 179, 93), rgb(166, 195, 244));
+}
 
-        body {
-            background:linear-gradient(45deg , rgb(245, 179, 93) , rgb(166, 195, 244));
-        }
+/* Attribution */
+#attribution-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
 
-        @media screen and (max-width:900px) {
-            .row {
-                display: flex;
-                flex-direction: column;
-                justify-content:left;
-            }
+#attribution-container .attribution span {
+    padding: 30px;
+    font-size: 1rem;
+    color: white;
+}
 
-            #col-first{
-                width:100%;
-            }
+#attribution-container .attribution a {
+    color: rgb(0, 72, 255);
+}
 
-            #col-first form {
-                display: flex;
-                flex-direction: row;
-                align-items:center ;
-            }
+@media screen and (max-width:900px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
 
-            #col-first form label {
-                width: 50%;
-                font-size: 0.9rem;
-            }
+    #col-first {
+        width: 100%;
+    }
 
-            #col-first form select {
-                font-size: 0.9rem;
-            }
+    #col-first form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-            #col-second {
-                width: 100%;
-            }
+    #col-first form label {
+        width: 50%;
+        font-size: 0.9rem;
+    }
 
-            #col-second #container {
-                margin: 10px 70px;
-            }
-        }
-   
+    #col-first form select {
+        font-size: 0.9rem;
+    }
+
+    #col-second {
+        width: 100%;
+    }
+
+    #col-second #container {
+        margin: 10px 70px;
+    }
+
+    /* Attribution */
+    #attribution-container .attribution {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    #attribution-container .attribution span {
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+}
