@@ -33,7 +33,7 @@ function LoadProducts(url) {
                                     <p><span class="bi bi-star-fill text-warning"></span> ${product.rating.rate}</p>
                                  </div>
                                  <div class="card-footer">
-                                    <button onclick="AddToCartClick(${product.id})" class="btn btn-warning w-100">
+                                    <button onclick="AddToCartClick(${product.id})" data-bs-target="#alert" data-bs-toggle="alert" class="btn btn-warning w-100">
                                     <span class="bi bi-cart4"></span> <span id="cartbtntext">Add to Cart</span>
                                     </button>
                                  </div>`;
@@ -66,7 +66,7 @@ function AddToCartClick(id) {
         .then(function (data) {
             cartItems.push(data);
             GetCartItemsCount();
-            alert(`${data.title} \n Added to Cart`);
+            // alert(`${data.title} \n Added to Cart`);
         })
 }
 
@@ -100,22 +100,29 @@ function showCart() {
 }
 
 function RemoveItem(id) {
-    var confirmResult = confirm("Are you sure want to remove item ?");
-    if (confirmResult == true) {
-        const Indexofobject = cartItems.findIndex(function (object) {
-            return object.id === id;
-        });
-        cartItems.splice(Indexofobject, 1);
-        showCart();
-        GetCartItemsCount();
-    }
-    else {
-        return false;
-    }
+    // var confirmResult = confirm("Are you sure want to remove item ?");
+    // if (confirmResult == true) {
+    //     const Indexofobject = cartItems.findIndex(function (object) {
+    //         return object.id === id;
+    //     });
+    //     cartItems.splice(Indexofobject, 1);
+    //     showCart();
+    //     GetCartItemsCount();
+    // }
+    // else {
+    //     return false;
+    // }
+
+    const Indexofobject = cartItems.findIndex(function (object) {
+        return object.id === id;
+    });
+    cartItems.splice(Indexofobject, 1);
+    showCart();
+    GetCartItemsCount();
 }
 
 function payClick() {
-    document.write("<h1> Thanks for visit Fakstore </h1>".fontcolor("green"))
+    document.write("<h1> Thanks for visit Fakstore </h1>");
 }
 
 function bodyload() {
